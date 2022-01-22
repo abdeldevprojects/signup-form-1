@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+*::after,
+*::before,
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --red : hsl(0, 100%, 74%);
+    --green : hsl(154, 59%, 51%);
+    --clr-accent : hsl(248, 32%, 49%);
+    --dark-blue : hsl(249, 10%, 26%);
+    --grayish-blue : hsl(246, 25%, 77%);
+    --light-grayish-blue : hsl(0, 0%, 92%);
+    --font-family  : 'Poppins', 'sans-serif';
+}
+
+a {
+    text-decoration: none;
+}
+
+h1,
+p {
+    margin: 0;
+}
+
+body {
+    font-size: 1rem;
+    margin: 1em;
+    font-family: var(--font-family);
+    background: url("images/bg-intro-mobile.png");
+    background-color: var(--red);
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+.container {
+    margin: 5.5em auto;
+    max-width: 1000px;
+    
+}
+
+/* Left Part */
+
+.text-content {
+    text-align: center;
+}
+
+.text-content .title {
+    color: #fff;
+    font-size: 1.5rem;
+    /* width: 70%; */
+    padding: 0 20px;
+}
+
+.text-content .para {
+    margin-top: 2em;
+    line-height: 1.8;
+    color: var(--light-grayish-blue);
+}
+
+/* Right Part */
+
+.cta {
+    text-align: center;
+    border-radius: 10px;
+    background-color: var(--clr-accent);
+    color: var(--light-grayish-blue);
+    margin-top: 3rem;
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+.cta p {
+    padding: 15px 50px;
+    line-height: 1.5;
+}
+
+.bold {
+    color: #fff;
+    font-weight: 700;
+}
+
+/* The Form  */
+
+form {
+    background: #fff;
+    border-radius: 10px;
+    padding: 15px;
+    margin-top: 2em;
+    /* max-width: 50%; */
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.form-control {
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+    position: relative;
+}
+
+.form-control input {
+    border: 2px solid var(--grayish-blue);
+    border-radius: 5px;
+    display: block;
+    width: 100%;
+    padding: 15px;
+    font-weight: 600;
+}
+
+.form-control.success input {
+    border-color: var(--green);
+}
+
+.form-control.error input {
+    border-color: var(--red);
+}
+
+.form-control i {
+    position: absolute;
+    top: 18px;
+    right: 10px;
+    visibility: hidden;
+}
+
+.form-control.success i.fa-check-circle {
+    visibility: visible;
+    color: var(--green);
+}
+
+.form-control.error i.fa-exclamation-circle {
+    visibility: visible;
+    color: var(--red);
+}
+
+.form-control small {
+    visibility: hidden;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.form-control.error small {
+    visibility: visible;
+    color: var(--red);
+}
+
+.form button {
+    background-color: var(--green);
+    border: 2px solid var(--green);
+    border-radius: 5px;
+    color: #fff;
+    display: block;
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding: 12px;
+    width: 100%;
+    text-transform: uppercase;
+}
+
+.terms {
+    font-size: .8rem;
+    text-align: center;
+    padding: 10px;
+    color: var(--grayish-blue);
+}
+
+.red-text {
+    color: var(--red);
+    font-weight: 700;
+}
+
+@media (min-width: 768px) {
+    .container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .left {
+        max-width: 420px;
+    }
+
+    .right {
+        max-width: 500px;
+    }
+
+    .text-content {
+        text-align: left;
+    }
+
+    .text-content .title {
+        color: #fff;
+        padding: 0;
+        line-height: 1.1;
+        margin-bottom: 20px;
+        font-size: 3rem;
+    }
+
+    .text-content .para {
+        margin: 0;
+        line-height: 1.8;
+        color: var(--light-grayish-blue);
+    }
+}
